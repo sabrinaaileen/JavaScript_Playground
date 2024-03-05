@@ -1,0 +1,128 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+header {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+header ul {
+  list-style-type: none;
+  margin: 20px auto;
+}
+header li {
+  display: inline;
+  padding: 20px 30px;
+}
+main {
+  padding: 10px 20px;
+}
+.hero {
+  max-width: 90%;
+  margin: 15px auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.ddpix.de/wp-content/uploads/2010/10/001361.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  text-align: center;
+}
+.hero h1,
+.hero h2 {
+  padding: 40px 0;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 3px;
+}
+.hero h1 {
+  font-size: 72px;
+}
+.hero h2 {
+  font-size: 45px;
+}
+.hero button {
+  font-size: 30px;
+  line-height: 2;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  margin: 15px auto;
+  display: inline;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #382852;
+  border-radius: 20px;
+  box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.3);
+  transition: all 150ms ease-in-out;
+}
+.hero button:hover {
+  color: #382852;
+  border-color: #382852;
+  background-color: #fff;
+  cursor: pointer;
+}
+section {
+  margin: 60px auto;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+}
+section .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section .grid-item {
+  padding-left: 20px;
+  padding-right: 15px;
+}
+section h3 {
+  font-size: 30px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+section #diary-text {
+  padding: 20px 25px;
+  background-color: rgb(56, 40, 82, 0.2);
+  margin-right: 10px;
+  border: 1px solid #382852;
+}
+section #diary-text::placeholder {
+  color: #382852;
+}
+section #diary-submit {
+  padding: 20px 25px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #382852;
+  border-radius: 20px;
+  box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.3);
+  transition: all 150ms ease-in-out;
+}
+section #diary-submit:hover {
+  color: #382852;
+  border-color: #382852;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+section #diary-list {
+  margin-top: 30px;
+  padding: 20px 0;
+  list-style-type: none;
+}
+section #diary-list li {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+section h4 {
+  font-size: 25px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  text-align: center;
+}
+section p {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-align: center;
+}
