@@ -17,7 +17,7 @@ main {
   padding: 10px 20px;
 }
 .hero {
-  max-width: 90%;
+  width: 90%;
   margin: 15px auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://www.ddpix.de/wp-content/uploads/2010/10/001361.jpg");
@@ -162,4 +162,54 @@ section #font-color-fun-paragraph {
 section #font-color-fun-paragraph:hover {
   cursor: pointer;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+footer #github-paragraph {
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 3px;
+}
+footer #github-link {
+  text-decoration: none;
+  color: #382852;
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
+}
+footer #github-link:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    width: 98%;
+  }
+  .hero button {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  section {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+  .hero h2 {
+    font-size: 35px;
+  }
+  section #diary-text,
+  section #diary-submit,
+  section #fresh-up-button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  section .grid {
+    grid-template-columns: 1fr;
+  }
 }
