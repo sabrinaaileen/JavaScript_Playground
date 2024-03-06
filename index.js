@@ -1,3 +1,19 @@
+//Hero button
+let backgroundChange = document.getElementById("hero-button");
+backgroundChange.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (event.target.value === "utopia") {
+    document.getElementById("hero-h1").style.color = "#382852";
+    document.getElementById("hero-h2").style.color = "#382852";
+    document.getElementById("hero").style.backgroundImage =
+      "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/Turtle_Group_2.jpeg)";
+    let valueChange = document.getElementById("hero-button");
+    valueChange.value = "distopia";
+  } else {
+    location.reload();
+  }
+});
+
 //First section: Diary
 let diaryForm = document.getElementById("diary-form");
 
