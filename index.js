@@ -1,3 +1,21 @@
+//First section: Diary
+let diaryForm = document.getElementById("diary-form");
+
+diaryForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let diaryText = document.getElementById("diary-text");
+
+  if (diaryText.value) {
+    let newDiaryEntry = document.createElement("li");
+
+    newDiaryEntry.id = "diary-entry";
+    newDiaryEntry.innerHTML = diaryText.value;
+    document.getElementById("diary-list").appendChild(newDiaryEntry);
+  }
+});
+
+//Second section: Font and Color Change
+
 let coincidence = document.getElementById("font-color-fun-paragraph");
 
 coincidence.addEventListener("click", function () {
