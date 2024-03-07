@@ -111,3 +111,21 @@ function showFortuneTelling() {
 }
 
 fortuneTelling.addEventListener("click", showFortuneTelling);
+
+//Fourth section: Lucky number
+
+let luckyButton = document.getElementById("lucky-number-button");
+
+function getLuckyNumber() {
+  let randomNumber = Math.floor(Math.random() * 9);
+  return randomNumber;
+}
+
+function showLuckyNumber() {
+  let luckyNumber = document.getElementById("lucky-number");
+  luckyNumber.innerHTML = getLuckyNumber();
+  luckyButton.innerHTML = "Congratulations!";
+  luckyButton.removeEventListener("click", showLuckyNumber);
+}
+
+luckyButton.addEventListener("click", showLuckyNumber);
