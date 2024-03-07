@@ -2,16 +2,25 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 header {
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding: 20px 0;
+  width: 90%;
+  margin: 0 auto;
 }
-header ul {
+header .navbar {
+  padding: 30px auto;
+}
+header .nav-menu {
   list-style-type: none;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 0;
 }
-header li {
+header .menu-item {
   display: inline;
-  padding: 20px 30px;
+  padding: 20px 30px 0 0;
+}
+header a {
+  text-decoration: none;
+  color: #382852;
 }
 main {
   padding: 10px 20px;
