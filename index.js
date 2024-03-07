@@ -129,3 +129,57 @@ function showLuckyNumber() {
 }
 
 luckyButton.addEventListener("click", showLuckyNumber);
+
+//Fifth section: Crazy Color
+
+let crazyColorButton = document.getElementById("crazy-color-button");
+let crazyColorParagraph = document.getElementById("crazy-color-paragraph");
+
+let funnySentences = [
+  "Very good!",
+  "Hope you enjoy!",
+  "This looks nice!",
+  "That is my favorite color!",
+  "I think, that is enough!",
+  "Could this BE more fun?",
+  "You are doing great!",
+  "You are a pro in this game!",
+];
+function getRandomSentence() {
+  let randomSentence = Math.floor(Math.random() * funnySentences.length);
+  return funnySentences[randomSentence];
+}
+
+function getRandomColor() {
+  let randomColor = Math.floor(Math.random() * 256);
+  return randomColor;
+}
+
+function changeColorButton(event) {
+  let newColor =
+    "rgb(" +
+    getRandomColor() +
+    "," +
+    getRandomColor() +
+    "," +
+    getRandomColor() +
+    ")";
+  event.target.style.backgroundColor = newColor;
+  event.target.style.borderColor = newColor;
+  event.target.style.color = "white";
+  crazyColorButton.innerHTML = getRandomSentence();
+}
+function changeColorParagraph() {
+  let newColor =
+    "rgb(" +
+    getRandomColor() +
+    "," +
+    getRandomColor() +
+    "," +
+    getRandomColor() +
+    ")";
+  crazyColorParagraph.style.color = newColor;
+}
+
+crazyColorButton.addEventListener("click", changeColorButton);
+crazyColorParagraph.addEventListener("wheel", changeColorParagraph);
