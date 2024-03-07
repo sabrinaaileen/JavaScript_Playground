@@ -80,3 +80,34 @@ coincidence.addEventListener("click", function () {
   coincidence.style.color = newColor;
   coincidence.style.fontFamily = newFont;
 });
+
+//Third section: Fortune Teller
+
+let fortuneQuotes = [
+  "An exciting opportunity lies ahead of you.",
+  "Get your mind set…confidence will lead you on.",
+  "Sell your ideas-they have exceptional merit.",
+  "Your ability to juggle many tasks will take you far.",
+  "Be true to your work, your word, and your friend.",
+  "Goodness is the only investment that never fails.",
+  "Respect yourself and others will respect you.",
+  "Once you make a decision the universe conspires to make it happen.",
+  "Happy News is on its way.",
+  "Love is like wildflowers…it is often found in the most unlikely places.",
+  "Love is not something you find, love is something that finds you.",
+];
+let fortuneTelling = document.getElementById("fortune-teller-button");
+
+function getFortuneTelling() {
+  let randomFortune = Math.floor(Math.random() * fortuneQuotes.length);
+  return fortuneQuotes[randomFortune];
+}
+
+function showFortuneTelling() {
+  let fortuneParagraph = document.getElementById("fortune-teller-paragraph");
+  fortuneParagraph.innerHTML = getFortuneTelling();
+  fortuneTelling.innerHTML = "Come back tomorrow";
+  fortuneTelling.removeEventListener("click", showFortuneTelling);
+}
+
+fortuneTelling.addEventListener("click", showFortuneTelling);
