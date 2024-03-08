@@ -183,3 +183,26 @@ function changeColorParagraph() {
 
 crazyColorButton.addEventListener("click", changeColorButton);
 crazyColorParagraph.addEventListener("wheel", changeColorParagraph);
+
+//Sixth section: Picture hide & seek
+
+let showButton = document.getElementById("show-image-button");
+let hideButton = document.getElementById("hide-image-button");
+let picture = document.getElementById("hide-and-seek-image");
+let hiddenParagraph = document.getElementById("hidden-show-image-paragraph");
+
+function showImage() {
+  picture.style.display = "block";
+  hideButton.style.display = "inline";
+  showButton.innerHTML = "Hello, World!";
+  hiddenParagraph.innerHTML = "See? I was right 🥰.";
+}
+function hideImage() {
+  picture.style.display = "none";
+  hideButton.style.display = "none";
+  showButton.innerHTML = "Show me the picture again!";
+  hiddenParagraph.innerHTML = "";
+}
+
+showButton.addEventListener("click", showImage);
+hideButton.addEventListener("click", hideImage);

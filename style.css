@@ -180,6 +180,15 @@ section #crazy-color-paragraph:hover {
   cursor: pointer;
 }
 
+section #hide-and-seek-image {
+  width: 200px;
+  margin: 10px auto;
+  display: none;
+}
+section #hide-image-button {
+  display: none;
+}
+
 footer #github-paragraph {
   text-align: center;
   line-height: 1.5;
