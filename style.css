@@ -188,6 +188,50 @@ section #hide-and-seek-image {
 section #hide-image-button {
   display: none;
 }
+section #grid-7 {
+  height: 500px;
+}
+section #grid-7-item {
+  position: relative;
+  background-color: #7c3c68;
+}
+section #grid-7-item h3 {
+  color: #ffb95d;
+}
+section #grid-7-item p {
+  color: #f9f871;
+}
+section #float-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #382852;
+  left: 54%;
+  bottom: 50px;
+  position: absolute;
+  transition-property: bottom;
+  transition-duration: 2s;
+}
+section #platform {
+  height: 29px;
+  width: 140px;
+  background-color: #eb8163;
+  bottom: 20px;
+  left: 50%;
+  right: 50%;
+  position: absolute;
+}
+section #floor {
+  height: 20px;
+  width: 100%;
+  background-color: #bc566b;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+section .emoji {
+  font-size: 45px;
+}
 
 footer #github-paragraph {
   text-align: center;

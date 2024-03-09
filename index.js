@@ -206,3 +206,16 @@ function hideImage() {
 
 showButton.addEventListener("click", showImage);
 hideButton.addEventListener("click", hideImage);
+
+//Seventh section: Bounce that ball
+
+let bouncingBall = document.getElementById("float-circle");
+
+function up() {
+  bouncingBall.style.bottom = "270px";
+}
+function down() {
+  bouncingBall.style.bottom = "50px";
+}
+document.addEventListener("keydown", up);
+document.addEventListener("keyup", down);
