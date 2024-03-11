@@ -75,6 +75,14 @@ section {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 20px 15px;
 }
+.date-display {
+  background-color: #382852;
+  color: #fff;
+  transition: all 150ms ease-in-out;
+}
+.date-display:hover {
+  transform: scale(1.5);
+}
 section .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -272,6 +280,9 @@ footer #github-link:hover {
   .hero h2 {
     font-size: 35px;
   }
+  section {
+    padding: 10px 7.5px;
+  }
   section #diary-text,
   section #diary-submit,
   section button {
@@ -292,5 +303,8 @@ footer #github-link:hover {
   }
   section #grid-7-item {
     height: 400px;
+  }
+  .date-display:hover {
+    transform: scale(1.1);
   }
 }

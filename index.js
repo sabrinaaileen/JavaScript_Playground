@@ -1,3 +1,61 @@
+//Date
+function showDate() {
+  let date = new Date();
+  let hours = date.getHours();
+  if (hours < 0) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 0) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let currentDay = date.getDate();
+  if (currentDay === 1) {
+    currentDay = `${currentDay}st`;
+  } else if (currentDay === 2) {
+    currentDay = `${currentDay}nd`;
+  } else if (currentDay === 3) {
+    currentDay = `${currentDay}rd`;
+  } else {
+    currentDay = `${currentDay}th`;
+  }
+  let currentYear = date.getFullYear();
+  let actualDay = document.querySelector("#day-display");
+  actualDay.innerHTML = `Today, it's ${day} the ${currentDay} of ${month} ${currentYear}.`;
+  let actualTime = document.querySelector("#time-display");
+  actualTime.innerHTML = `The current time is ${hours}:${minutes}.`;
+}
+showDate();
+
+let today = new Date();
+let newDate = today.getDate();
+console.log(newDate);
+
 //Hero button
 let backgroundChange = document.getElementById("hero-button");
 backgroundChange.addEventListener("click", function (event) {
