@@ -232,6 +232,9 @@ section #floor {
 section .emoji {
   font-size: 45px;
 }
+section .note-paragraph {
+  font-size: 10px;
+}
 
 footer #github-paragraph {
   text-align: center;
@@ -283,5 +286,11 @@ footer #github-link:hover {
 @media (max-width: 800px) {
   section .grid {
     grid-template-columns: 1fr;
+  }
+  section #grid-7 {
+    height: auto;
+  }
+  section #grid-7-item {
+    height: 400px;
   }
 }
