@@ -2,12 +2,16 @@
 function showDate() {
   let date = new Date();
   let hours = date.getHours();
-  if (hours < 0) {
+  if (hours < 10) {
     hours = `0${hours}`;
   }
   let minutes = date.getMinutes();
-  if (minutes < 0) {
+  if (minutes < 10) {
     minutes = `0${minutes}`;
+  }
+  let seconds = date.getSeconds();
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
   }
   let days = [
     "Sunday",
@@ -48,9 +52,9 @@ function showDate() {
   let actualDay = document.querySelector("#day-display");
   actualDay.innerHTML = `Today, it's ${day} the ${currentDay} of ${month} ${currentYear}.`;
   let actualTime = document.querySelector("#time-display");
-  actualTime.innerHTML = `The current time is ${hours}:${minutes}.`;
+  actualTime.innerHTML = `The current time is ${hours}:${minutes}:${seconds}.`;
 }
-showDate();
+setInterval(showDate, 1000);
 
 let today = new Date();
 let newDate = today.getDate();
@@ -277,3 +281,16 @@ function down() {
 }
 document.addEventListener("keydown", up);
 document.addEventListener("keyup", down);
+
+//Eighth section: Mouse events
+
+let mouseClick = document.querySelector("#mouse-action-paragraph");
+
+const mouseDown = (event) => {
+  event.target.style.backgroundColor = "#7c3c68";
+};
+const mouseUp = (event) => {
+  event.target.style.backgroundColor = "";
+};
+mouseClick.addEventListener("mousedown", mouseDown);
+mouseClick.addEventListener("mouseup", mouseUp);
