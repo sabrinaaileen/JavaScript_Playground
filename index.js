@@ -294,3 +294,65 @@ const mouseUp = (event) => {
 };
 mouseClick.addEventListener("mousedown", mouseDown);
 mouseClick.addEventListener("mouseup", mouseUp);
+
+//Ninth section: Lord of the Rings Riddle
+
+let buttonOne = document.getElementById("button-one");
+let buttonTwo = document.getElementById("button-two");
+let buttonThree = document.getElementById("button-three");
+let buttonFour = document.getElementById("button-four");
+let buttonFive = document.getElementById("button-five");
+let paragraphOne = document.getElementById("first-riddle-paragraph");
+let sectionChange = document.getElementById("lord-of-the-rings-section");
+let instructionHide = document.getElementById("lord-of-the-rings-instructions");
+let headingColor = document.querySelector(".lord-of-the-rings-heading");
+let paragraphTwo = document.getElementById("second-riddle-paragraph");
+
+function showFirstRiddle() {
+  buttonOne.style.display = "none";
+  sectionChange.style.backgroundColor = "#5e614d";
+  headingColor.style.color = "#000";
+  instructionHide.innerHTML =
+    '<img src="./images/Galadriel.jpg" alt="Galadriel" class="lord-of-the-rings-photo"/>';
+  paragraphOne.innerHTML =
+    "Welcome MELON! As the story begins, you can think about a world so far away and so mysterious you wish you could leave your life behind to live there. But in MIDDLE-EARTH lies a dark shadow and you remember this old... we will call it <em>poem</em>.";
+  paragraphTwo.innerHTML =
+    "It began with the forging of the Great Rings. Three were given to the Elves, immortal, wisest and fairest of all beings. Seven to the Dwarf-Lords, great miners and craftsmen of the mountain halls. And nine, nine rings were gifted to the race of Men, who above all else desire power. For within these rings was bound the strength and the will to govern each race. But they were all of them deceived, for another ring was made. Deep in the land of Mordor, in the Fires of Mount Doom, the Dark Lord Sauron forged a master ring, and into this ring he poured his cruelty, his malice and his will to dominate all life. One ring to rule them all. One ring to find them, one ring to bring them all and in the darkness bind them in the land of Mordor where the Shadows lie. <br /> <b>The woman, the elf on the picture introduces us in the first movie to the history. What is her name?</b>";
+  buttonTwo.style.display = "inline";
+  buttonThree.style.display = "inline";
+}
+function showSecondRiddle() {
+  instructionHide.innerHTML =
+    '<img src="./images/Herr-der-Ringe-picture-alliance-Mary-Evans-Picture-Library-18613065-.jpg" alt="The Hobbits" class="lord-of-the-rings-photo"/>';
+  paragraphOne.innerHTML =
+    "<b>Frodo</b> carries the One Ring. Gandalf the wizard trusts him. But Gandalf cannot travel with Frodo and the <em>Nazgul</em> are on their way (The Nine, the black riders, they are the dreaded ring-servants of the dark Lord Sauron). There is no time to hesitate, he must bring the ring to Rivendell. And Frodo is lucky to have his gardener and friend by his side: Samwise Gamgee.";
+  paragraphTwo.innerHTML =
+    "But luckily Frodo has two more friends, who join him on his way. The moment, one of the <em>Nazgul</em> shows up, is for all of them terrifying. Merry knows a quick way to their next stage. <br /> <b>Choose the right path:</b>";
+  buttonTwo.style.display = "none";
+  buttonThree.style.display = "none";
+  buttonFour.style.display = "inline";
+  buttonFive.style.display = "inline";
+}
+function showThirdRiddle() {
+  instructionHide.innerHTML =
+    '<img src="./images/strider1.jpg" alt="Strider" class="lord-of-the-rings-photo"/><img src="./images/aragorn-500x375.jpg" alt="Aragorn" class="lord-of-the-rings-photo"/>';
+  paragraphOne.innerHTML =
+    "Great! You are now in Bree. But Gandalf is not here to meet the Hobbits... Something is wrong... Good, that there is a helpful stranger who saves Frodo. Something really stupid happened: Pippin, the fourth hobbit, is telling people about Frodo and Frodo slips on beer or something else and falls down, while he tries to tell Pippin to stop talking with strangers about him. The Ring is flying and lands on Frodos finger: We see that the Black Rider is not alone anymore and they get back on track and are on their way, now that Frodo had the ring on his finger. In the night the try to kill the hobbits, but the stranger (Strider or Aragorn) saves them.";
+  paragraphTwo.innerHTML =
+    "After the little incident on Weathertop Hill, where Frodo nearly died, they were rescued by Arwen, a High-Elf from Rivendell, daughter of Elrond. Elrond, the Lord of Rivendell, saves Frodo.";
+  buttonFour.style.display = "none";
+  buttonFive.style.display = "none";
+}
+
+buttonOne.addEventListener("click", showFirstRiddle);
+buttonTwo.addEventListener("click", function () {
+  alert("Try again!");
+});
+buttonThree.addEventListener("click", showSecondRiddle);
+buttonFour.addEventListener("click", showThirdRiddle);
+buttonFive.addEventListener("click", function () {
+  alert(
+    "Apparently the bridge is about 20 miles further north. That is a long way to run and the Black Rider has a horse. You die immediatly and Sauron gets the One Ring back: Darkness falls over the land and all hope dies."
+  );
+  location.reload();
+});
