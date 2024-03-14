@@ -307,8 +307,34 @@ section .lord-of-the-rings-button-2:hover {
 section #button-two,
 #button-three,
 #button-four,
-#button-five {
+#button-five,
+#button-six,
+#button-seven {
   display: none;
+}
+section #riddle-three-form,
+#riddle-five-form {
+  display: none;
+}
+section .riddle-input {
+  background-color: #5e614d;
+  color: #2b2f22;
+  padding: 10px 15px;
+  border: 2px solid #2b2f22;
+  margin-right: 10px;
+}
+section .riddle-submit {
+  padding: 10px 15px;
+  color: #5e614d;
+  border: 2px solid #5e614d;
+  background-color: #2b2f22;
+  transition: all 150ms ease-in-out;
+}
+section #riddle-three-submit:hover {
+  cursor: pointer;
+  background-color: #5e614d;
+  color: #2b2f22;
+  border: 2px solid #2b2f22;
 }
 
 footer #github-paragraph {
@@ -376,5 +402,8 @@ footer #github-link:hover {
   }
   section .second-grid {
     grid-template-columns: 1fr;
+  }
+  section .lord-of-the-rings-photo {
+    margin: 50px auto;
   }
 }

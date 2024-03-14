@@ -302,11 +302,15 @@ let buttonTwo = document.getElementById("button-two");
 let buttonThree = document.getElementById("button-three");
 let buttonFour = document.getElementById("button-four");
 let buttonFive = document.getElementById("button-five");
+let buttonSix = document.getElementById("button-six");
+let buttonSeven = document.getElementById("button-seven");
 let paragraphOne = document.getElementById("first-riddle-paragraph");
 let sectionChange = document.getElementById("lord-of-the-rings-section");
 let instructionHide = document.getElementById("lord-of-the-rings-instructions");
 let headingColor = document.querySelector(".lord-of-the-rings-heading");
 let paragraphTwo = document.getElementById("second-riddle-paragraph");
+let formOne = document.getElementById("riddle-three-form");
+let formTwo = document.getElementById("riddle-five-form");
 
 function showFirstRiddle() {
   buttonOne.style.display = "none";
@@ -339,9 +343,57 @@ function showThirdRiddle() {
   paragraphOne.innerHTML =
     "Great! You are now in Bree. But Gandalf is not here to meet the Hobbits... Something is wrong... Good, that there is a helpful stranger who saves Frodo. Something really stupid happened: Pippin, the fourth hobbit, is telling people about Frodo and Frodo slips on beer or something else and falls down, while he tries to tell Pippin to stop talking with strangers about him. The Ring is flying and lands on Frodos finger: We see that the Black Rider is not alone anymore and they get back on track and are on their way, now that Frodo had the ring on his finger. In the night the try to kill the hobbits, but the stranger (Strider or Aragorn) saves them.";
   paragraphTwo.innerHTML =
-    "After the little incident on Weathertop Hill, where Frodo nearly died, they were rescued by Arwen, a High-Elf from Rivendell, daughter of Elrond. Elrond, the Lord of Rivendell, saves Frodo.";
+    "After the little incident on Weathertop Hill, where Frodo nearly died, they were rescued by Arwen, a High-Elf from Rivendell, daughter of Elrond. Elrond, the Lord of Rivendell, saves Frodo. <br /> <b>The council begins and it is full of mistrust and dispute. Some of it produces the ring on the table. Everyone seems to be affected by the ring, but one person:</b>";
   buttonFour.style.display = "none";
   buttonFive.style.display = "none";
+  formOne.style.display = "inline";
+}
+function showFourthRiddle(event) {
+  event.preventDefault();
+  let riddleInput = document.getElementById("riddle-three-input");
+  let riddleAnswer = riddleInput.value;
+  if (riddleInput.value === "Frodo" || riddleInput.value === "frodo") {
+    alert("Yes");
+    formOne.style.display = "none";
+    paragraphOne.innerHTML =
+      "Very good! Now put together the fellowship of the Ring:";
+    paragraphTwo.innerHTML = "<b>Choose the right constellation.</b>";
+    instructionHide.innerHTML =
+      '<img src="./images/Die-gefaehrten.jpg" alt="The fellowship" class="lord-of-the-rings-photo"/>';
+    buttonSix.style.display = "inline";
+    buttonSeven.style.display = "inline";
+  } else {
+    alert(`${riddleAnswer} is wrong, guess again.`);
+  }
+}
+function showFifthRiddle() {
+  instructionHide.innerHTML =
+    '<img src="./images/Balrog.jpeg" alt="The Balrog" class="lord-of-the-rings-photo"/>';
+  paragraphOne.innerHTML =
+    "The fellowship is now good to go. A long journey is ahead of them. <br /> “Home is behind, the world ahead, and there are many paths to tread through shadows to the edge of night, until the stars are all alight. Then world behind and home ahead, we will wander back and home to bed. Mist and twilight, cloud and shade, away shall fade! Away shall fade!”― J.R.R. Tolkien,";
+  paragraphTwo.innerHTML =
+    "Over the hill and under the hill, over the Caradhras and through the mines of Moria. The fellowship felt the influence of the corrupted wizard Saruman: The storm and snow made it impossible to go over the Caradhras, they must go through the mines. And there are orcs and another terrifying and ancient creature: The Balrog. <br /> <b>Only Gandalf can stop the Balrog. Do you remember how? He bravely confronted him on the bridge of Kazad-dûm, so the rest could flee. What is his famous quote, while he stops the Balrog?</b>";
+  buttonSix.style.display = "none";
+  buttonSeven.style.display = "none";
+  formTwo.style.display = "inline";
+}
+function showSixthRiddle(event) {
+  event.preventDefault();
+  let riddleInput = document.getElementById("riddle-five-input");
+  if (
+    riddleInput.value === "You shall not pass!" ||
+    riddleInput.value === "you shall not pass" ||
+    riddleInput.value === "YOU SHALL NOT PASS!" ||
+    riddleInput.value === "You shall not pass"
+  ) {
+    alert("You nailed it! You can pass!");
+  } else {
+    alert(
+      "Now that is sad... Or maybe you just need to check your grammar? When you really do not know: I embedded a YouTube Video for you to watch."
+    );
+    instructionHide.innerHTML =
+      '<img src="./images/Balrog.jpeg" alt="The Balrog" class="lord-of-the-rings-photo"/><!DOCTYPE html> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJZZNHekEQw?si=GLlbB2ISTIUN7Rs2&amp;start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  }
 }
 
 buttonOne.addEventListener("click", showFirstRiddle);
@@ -356,3 +408,9 @@ buttonFive.addEventListener("click", function () {
   );
   location.reload();
 });
+formOne.addEventListener("submit", showFourthRiddle);
+buttonSix.addEventListener("click", function () {
+  alert("You should read the plot or watch the trilogy...");
+});
+buttonSeven.addEventListener("click", showFifthRiddle);
+formTwo.addEventListener("submit", showSixthRiddle);
