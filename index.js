@@ -58,7 +58,6 @@ setInterval(showDate, 1000);
 
 let today = new Date();
 let newDate = today.getDate();
-console.log(newDate);
 
 //Hero button
 let backgroundChange = document.getElementById("hero-button");
@@ -304,6 +303,11 @@ let buttonFour = document.getElementById("button-four");
 let buttonFive = document.getElementById("button-five");
 let buttonSix = document.getElementById("button-six");
 let buttonSeven = document.getElementById("button-seven");
+let buttonEight = document.getElementById("button-eight");
+let buttonNine = document.getElementById("button-nine");
+let buttonTen = document.getElementById("button-ten");
+let buttonEleven = document.getElementById("button-eleven");
+let buttonTwelve = document.getElementById("button-twelve");
 let paragraphOne = document.getElementById("first-riddle-paragraph");
 let sectionChange = document.getElementById("lord-of-the-rings-section");
 let instructionHide = document.getElementById("lord-of-the-rings-instructions");
@@ -311,6 +315,7 @@ let headingColor = document.querySelector(".lord-of-the-rings-heading");
 let paragraphTwo = document.getElementById("second-riddle-paragraph");
 let formOne = document.getElementById("riddle-three-form");
 let formTwo = document.getElementById("riddle-five-form");
+let formThree = document.getElementById("riddle-seven-form");
 
 function showFirstRiddle() {
   buttonOne.style.display = "none";
@@ -353,7 +358,6 @@ function showFourthRiddle(event) {
   let riddleInput = document.getElementById("riddle-three-input");
   let riddleAnswer = riddleInput.value;
   if (riddleInput.value === "Frodo" || riddleInput.value === "frodo") {
-    alert("Yes");
     formOne.style.display = "none";
     paragraphOne.innerHTML =
       "Very good! Now put together the fellowship of the Ring:";
@@ -376,6 +380,7 @@ function showFifthRiddle() {
   buttonSix.style.display = "none";
   buttonSeven.style.display = "none";
   formTwo.style.display = "inline";
+  buttonEight.style.display = "none";
 }
 function showSixthRiddle(event) {
   event.preventDefault();
@@ -387,12 +392,59 @@ function showSixthRiddle(event) {
     riddleInput.value === "You shall not pass"
   ) {
     alert("You nailed it! You can pass!");
+    instructionHide.innerHTML =
+      '<img src="./images/Gimli.jpg" alt="Gimli" class="lord-of-the-rings-photo"/> <img src="./images/legolas-i142869.jpg" alt="Legolas" class="lord-of-the-rings-photo"/>';
+    paragraphOne.innerHTML =
+      "Without Gandalf they managed to get to Lothlórien to meet Galadriel. They get help, gifts, food and boats to travel by water. They can only imagine, what is coming to them: Saruman crossed Orcs with Goblin-men (Half human, half orc) to breed the uruk-hai. They are stronger, taller able to move in the daytime without ill effects.";
+    paragraphTwo.innerHTML =
+      "The big fight at the end of the first movie is also the breaking point of the fellowship. Frodo wants to protect everyone and wants to go alone to Mordor, but Sam is a good friend and follows him. But what happened to the other ones? Merry and Pippin were kidnapped after the leader of the Uruks killed the second man of the fellowship, Boromir, so cruel. And then are three left: Aragorn, Gimli the dwarf and legolas the elf. <br /><b>What are they doing?</b>";
+    formTwo.style.display = "none";
+    buttonNine.style.display = "inline";
+    buttonTen.style.display = "inline";
   } else {
     alert(
       "Now that is sad... Or maybe you just need to check your grammar? When you really do not know: I embedded a YouTube Video for you to watch."
     );
-    instructionHide.innerHTML =
-      '<img src="./images/Balrog.jpeg" alt="The Balrog" class="lord-of-the-rings-photo"/><!DOCTYPE html> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJZZNHekEQw?si=GLlbB2ISTIUN7Rs2&amp;start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    paragraphOne.innerHTML =
+      '<!DOCTYPE html> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mJZZNHekEQw?si=GLlbB2ISTIUN7Rs2&amp;start=74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    paragraphTwo.innerHTML = "";
+    formTwo.style.display = "none";
+    buttonEight.style.display = "inline";
+  }
+}
+function showSeventhRiddle() {
+  sectionChange.style.backgroundColor = "#8c4949";
+  headingColor.style.color = "#502730";
+  paragraphOne.style.color = "#532b35";
+  paragraphTwo.style.color = "#532b35";
+  buttonNine.style.display = "none";
+  buttonTen.style.display = "none";
+  instructionHide.innerHTML =
+    '<img src="./images/Eomer.jpg" alt="Gimli" class="lord-of-the-rings-photo"/>';
+  paragraphOne.innerHTML =
+    'Aragorn, Gimli and Legolas are on their way to rescue Merry and Pippin. And Frodo and Sam are on their way to Mount Doom. Let us cover our three running guys. Gimli can summon that for us: <br /> "Three days and nights pursuit… no food, no rest, and no sign of our quarry but what bare rock can tell."';
+  paragraphTwo.innerHTML =
+    "As they nearly get to the hobbits, they meet Éomer, the Third Marshal of the Mark in Rohan. He tells them, that he and his men killed the Uruk-hai and left no survivors behind. <br /> <b>So our guys assume, that Pippin and Merry are dead. Fortunately they find some signs, that they got away in the forest. So they follow the tracks into FANGORN FOREST. Answer the three questions: <br /> What is special about the forest? <br /> What person do they meet in there?</b> <br /> Where are they going to next and what are they doing there?";
+  formThree.style.display = "inline";
+}
+function showEighthRiddle(event) {
+  event.preventDefault();
+  let firstQuestion = document.getElementById("riddle-seven-select-one");
+  let secondQuestion = document.getElementById("riddle-seven-input");
+  let thirdQuestion = document.getElementById("riddle-seven-select-two");
+  let capitalizedSecondQuestion =
+    secondQuestion.value.charAt(0).toUpperCase() +
+    secondQuestion.value.slice(1);
+  if (
+    firstQuestion.value === "ents" &&
+    capitalizedSecondQuestion === "Gandalf" &&
+    thirdQuestion.value === "rohan"
+  ) {
+    alert("Yes! Good! More will come soon. Thank you for playing!");
+  } else {
+    alert(
+      "No, unfortunatly that is not true... Until the rest of the quiz is here, you can use the time to learn more about Lord of the Rings. Thank you for playing!"
+    );
   }
 }
 
@@ -414,3 +466,11 @@ buttonSix.addEventListener("click", function () {
 });
 buttonSeven.addEventListener("click", showFifthRiddle);
 formTwo.addEventListener("submit", showSixthRiddle);
+buttonEight.addEventListener("click", showFifthRiddle);
+buttonNine.addEventListener("click", function () {
+  alert(
+    "Merry and Pippin died shortly after they came to Saruman, because they did not have the One Ring. And with the three noticeable guys, the <em>not attracting attention</em> was over. They were spotted immediately by the Nazgul and died a terrible death. Sauron gets the One Ring back: Darkness falls over the land and all hope dies."
+  );
+});
+buttonTen.addEventListener("click", showSeventhRiddle);
+formThree.addEventListener("submit", showEighthRiddle);

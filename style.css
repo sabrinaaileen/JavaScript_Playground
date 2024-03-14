@@ -304,16 +304,32 @@ section .lord-of-the-rings-button-2:hover {
   border-color: #5e614d;
   color: #5e614d;
 }
+section .lord-of-the-rings-button-3 {
+  background-color: #8c4949;
+  color: #532b35;
+  border: 2px solid #532b35;
+}
+section .lord-of-the-rings-button-3:hover {
+  background-color: #532b35;
+  color: #8c4949;
+  border-color: #8c4949;
+}
 section #button-two,
 #button-three,
 #button-four,
 #button-five,
 #button-six,
-#button-seven {
+#button-seven,
+#button-eight,
+#button-nine,
+#button-ten,
+#button-eleven,
+#button-twelve {
   display: none;
 }
 section #riddle-three-form,
-#riddle-five-form {
+#riddle-five-form,
+#riddle-seven-form {
   display: none;
 }
 section .riddle-input {
@@ -335,6 +351,31 @@ section #riddle-three-submit:hover {
   background-color: #5e614d;
   color: #2b2f22;
   border: 2px solid #2b2f22;
+}
+section #riddle-seven-select-one,
+#riddle-seven-select-two,
+#riddle-seven-input,
+#riddle-seven-submit {
+  padding: 10px 15px;
+  background-color: #8c4949;
+  color: #502730;
+  border: 2px solid #502730;
+  margin-top: 15px;
+}
+/*#riddle-seven-input {
+  text-transform: capitalize;
+}*/
+#riddle-seven-input::placeholder {
+  color: #502730;
+}
+#riddle-seven-submit {
+  transition: all 150ms ease-in-out;
+}
+#riddle-seven-submit:hover {
+  cursor: pointer;
+  background-color: #502730;
+  color: #8c4949;
+  border-color: #8c4949;
 }
 
 footer #github-paragraph {
