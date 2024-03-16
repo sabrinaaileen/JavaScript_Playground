@@ -311,6 +311,7 @@ let buttonTwelve = document.getElementById("button-twelve");
 let paragraphOne = document.getElementById("first-riddle-paragraph");
 let sectionChange = document.getElementById("lord-of-the-rings-section");
 let instructionHide = document.getElementById("lord-of-the-rings-instructions");
+let gridOne = document.querySelector(".second-grid");
 let headingColor = document.querySelector(".lord-of-the-rings-heading");
 let paragraphTwo = document.getElementById("second-riddle-paragraph");
 let formOne = document.getElementById("riddle-three-form");
@@ -321,18 +322,16 @@ function showFirstRiddle() {
   buttonOne.style.display = "none";
   sectionChange.style.backgroundColor = "#5e614d";
   headingColor.style.color = "#000";
-  instructionHide.innerHTML =
-    '<img src="./images/Galadriel.jpg" alt="Galadriel" class="lord-of-the-rings-photo"/>';
+  instructionHide.style.display = "none";
+  gridOne.style.gridTemplateColumns = "1fr";
   paragraphOne.innerHTML =
     "Welcome MELON! As the story begins, you can think about a world so far away and so mysterious you wish you could leave your life behind to live there. But in MIDDLE-EARTH lies a dark shadow and you remember this old... we will call it <em>poem</em>.";
   paragraphTwo.innerHTML =
-    "It began with the forging of the Great Rings. Three were given to the Elves, immortal, wisest and fairest of all beings. Seven to the Dwarf-Lords, great miners and craftsmen of the mountain halls. And nine, nine rings were gifted to the race of Men, who above all else desire power. For within these rings was bound the strength and the will to govern each race. But they were all of them deceived, for another ring was made. Deep in the land of Mordor, in the Fires of Mount Doom, the Dark Lord Sauron forged a master ring, and into this ring he poured his cruelty, his malice and his will to dominate all life. One ring to rule them all. One ring to find them, one ring to bring them all and in the darkness bind them in the land of Mordor where the Shadows lie. <br /> <b>The woman, the elf on the picture introduces us in the first movie to the history. What is her name?</b>";
+    "It began with the forging of the Great Rings. Three were given to the Elves, immortal, wisest and fairest of all beings. Seven to the Dwarf-Lords, great miners and craftsmen of the mountain halls. And nine, nine rings were gifted to the race of Men, who above all else desire power. For within these rings was bound the strength and the will to govern each race. But they were all of them deceived, for another ring was made. Deep in the land of Mordor, in the Fires of Mount Doom, the Dark Lord Sauron forged a master ring, and into this ring he poured his cruelty, his malice and his will to dominate all life. One ring to rule them all. One ring to find them, one ring to bring them all and in the darkness bind them in the land of Mordor where the Shadows lie. <br /> <b>A woman, an elf introduces us in the first movie to the history. What is her name?</b>";
   buttonTwo.style.display = "inline";
   buttonThree.style.display = "inline";
 }
 function showSecondRiddle() {
-  instructionHide.innerHTML =
-    '<img src="./images/Herr-der-Ringe-picture-alliance-Mary-Evans-Picture-Library-18613065-.jpg" alt="The Hobbits" class="lord-of-the-rings-photo"/>';
   paragraphOne.innerHTML =
     "<b>Frodo</b> carries the One Ring. Gandalf the wizard trusts him. But Gandalf cannot travel with Frodo and the <em>Nazgul</em> are on their way (The Nine, the black riders, they are the dreaded ring-servants of the dark Lord Sauron). There is no time to hesitate, he must bring the ring to Rivendell. And Frodo is lucky to have his gardener and friend by his side: Samwise Gamgee.";
   paragraphTwo.innerHTML =
@@ -343,8 +342,6 @@ function showSecondRiddle() {
   buttonFive.style.display = "inline";
 }
 function showThirdRiddle() {
-  instructionHide.innerHTML =
-    '<img src="./images/strider1.jpg" alt="Strider" class="lord-of-the-rings-photo"/><img src="./images/aragorn-500x375.jpg" alt="Aragorn" class="lord-of-the-rings-photo"/>';
   paragraphOne.innerHTML =
     "Great! You are now in Bree. But Gandalf is not here to meet the Hobbits... Something is wrong... Good, that there is a helpful stranger who saves Frodo. Something really stupid happened: Pippin, the fourth hobbit, is telling people about Frodo and Frodo slips on beer or something else and falls down, while he tries to tell Pippin to stop talking with strangers about him. The Ring is flying and lands on Frodos finger: We see that the Black Rider is not alone anymore and they get back on track and are on their way, now that Frodo had the ring on his finger. In the night the try to kill the hobbits, but the stranger (Strider or Aragorn) saves them.";
   paragraphTwo.innerHTML =
@@ -362,8 +359,6 @@ function showFourthRiddle(event) {
     paragraphOne.innerHTML =
       "Very good! Now put together the fellowship of the Ring:";
     paragraphTwo.innerHTML = "<b>Choose the right constellation.</b>";
-    instructionHide.innerHTML =
-      '<img src="./images/Die-gefaehrten.jpg" alt="The fellowship" class="lord-of-the-rings-photo"/>';
     buttonSix.style.display = "inline";
     buttonSeven.style.display = "inline";
   } else {
@@ -371,8 +366,6 @@ function showFourthRiddle(event) {
   }
 }
 function showFifthRiddle() {
-  instructionHide.innerHTML =
-    '<img src="./images/Balrog.jpeg" alt="The Balrog" class="lord-of-the-rings-photo"/>';
   paragraphOne.innerHTML =
     "The fellowship is now good to go. A long journey is ahead of them. <br /> “Home is behind, the world ahead, and there are many paths to tread through shadows to the edge of night, until the stars are all alight. Then world behind and home ahead, we will wander back and home to bed. Mist and twilight, cloud and shade, away shall fade! Away shall fade!”― J.R.R. Tolkien,";
   paragraphTwo.innerHTML =
@@ -392,8 +385,6 @@ function showSixthRiddle(event) {
     riddleInput.value === "You shall not pass"
   ) {
     alert("You nailed it! You can pass!");
-    instructionHide.innerHTML =
-      '<img src="./images/Gimli.jpg" alt="Gimli" class="lord-of-the-rings-photo"/> <img src="./images/legolas-i142869.jpg" alt="Legolas" class="lord-of-the-rings-photo"/>';
     paragraphOne.innerHTML =
       "Without Gandalf they managed to get to Lothlórien to meet Galadriel. They get help, gifts, food and boats to travel by water. They can only imagine, what is coming to them: Saruman crossed Orcs with Goblin-men (Half human, half orc) to breed the uruk-hai. They are stronger, taller able to move in the daytime without ill effects.";
     paragraphTwo.innerHTML =
@@ -419,8 +410,6 @@ function showSeventhRiddle() {
   paragraphTwo.style.color = "#532b35";
   buttonNine.style.display = "none";
   buttonTen.style.display = "none";
-  instructionHide.innerHTML =
-    '<img src="./images/Eomer.jpg" alt="Gimli" class="lord-of-the-rings-photo"/>';
   paragraphOne.innerHTML =
     'Aragorn, Gimli and Legolas are on their way to rescue Merry and Pippin. And Frodo and Sam are on their way to Mount Doom. Let us cover our three running guys. Gimli can summon that for us: <br /> "Three days and nights pursuit… no food, no rest, and no sign of our quarry but what bare rock can tell."';
   paragraphTwo.innerHTML =
