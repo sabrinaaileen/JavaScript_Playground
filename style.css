@@ -377,6 +377,51 @@ section #riddle-seven-select-one,
   color: #8c4949;
   border-color: #8c4949;
 }
+section #burger-heading {
+  color: #382852;
+  background-color: #eb8163;
+  font-size: 48px;
+  letter-spacing: 3px;
+}
+section #burger-form {
+  background-color: #7c3c68;
+  padding: 20px 10px;
+}
+section #create-burger-heading {
+  letter-spacing: 4px;
+  font-size: 24px;
+  margin: 0 auto;
+  color: #ffb95d;
+}
+section #burger-form p {
+  color: #f9f871;
+  margin-bottom: 5px;
+}
+section #burger-form input,
+section #burger-form label {
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+section #burger-form #burger-submit {
+  padding: 10px 15px;
+  color: #382852;
+  background-color: #f9f871;
+  border: 1px solid #382852;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 200ms ease-in-out;
+}
+section #burger-form #burger-submit:hover {
+  cursor: pointer;
+  color: #f9f871;
+  border-color: #f9f871;
+  background-color: #382852;
+}
 
 footer #github-paragraph {
   text-align: center;

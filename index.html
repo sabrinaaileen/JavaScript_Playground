@@ -336,10 +336,11 @@
         </div>
       </section>
       <section>
-        <div class="grid">
+        <div class="second-grid">
           <div class="grid-item">
-            <h3>Burger Palace</h3>
-            <form action="">
+            <h3 id="burger-heading">Burger Palace</h3>
+            <form action="" id="burger-form">
+              <h4 id="create-burger-heading">CREATE YOUR OWN BURGER</h4>
               <p>Choose your bread</p>
               <input type="radio" id="brioche" name="bread" value="brioche" />
               <label for="brioche">Brioche</label>
@@ -360,12 +361,15 @@
                 value="sweet-poatato"
               />
               <label for="sweet-poatato">Sweet potato And lentil patty</label>
+              <br />
               <input type="radio" id="pumpkin" name="patty" value="pumpkin" />
               <label for="pumpkin">Pumpkin and chickpea patty</label>
+              <br />
               <input type="radio" id="couscous" name="patty" value="couscous" />
               <label for="couscous">Spiced Couscous and chickpea patty</label>
+              <br />
               <input type="radio" id="beef" name="patty" value="beef" />
-              <label for="beef">Beef atty</label>
+              <label for="beef">Beef patty</label>
               <input type="radio" id="chicken" name="patty" value="chicken" />
               <label for="chicken">Chicken patty</label>
               <p>Do you want cheese on your burger?</p>
@@ -383,6 +387,7 @@
                 value="vegan-cheddar"
               />
               <label for="vegan-cheddar">Vegan cheddar cheese</label>
+              <br />
               <input
                 type="radio"
                 id="emmentaler"
@@ -392,6 +397,14 @@
               <label for="emmentaler">Emmentaler cheese</label>
               <input type="radio" id="cheddar" name="cheese" value="cheddar" />
               <label for="cheddar">Cheddar cheese</label>
+              <br />
+              <input
+                type="radio"
+                id="no-cheese"
+                name="cheese"
+                value="no-cheese"
+              />
+              <label for="no-cheese">No cheese</label>
               <p>How do you want your patty?</p>
               <label for="doneness">Rare</label>
               <input
@@ -403,9 +416,58 @@
                 max="5"
               />
               <label for="doneness">Medium</label>
+              <p>How many patties do you want?</p>
+              <input type="number" value="amount" id="amount" min="1" max="3" />
+              <p>Choose your toppings:</p>
+              <input
+                type="checkbox"
+                value="tomato"
+                id="tomato"
+                name="topping"
+              />
+              <label for="tomato">Tomato</label>
+              <input
+                type="checkbox"
+                value="lettuce"
+                id="lettuce"
+                name="topping"
+              />
+              <label for="lettuce">Lettuce</label>
+              <input type="checkbox" value="onion" id="onion" name="topping" />
+              <label for="onion">Onion</label>
+              <input
+                type="checkbox"
+                value="pickle"
+                id="pickle"
+                name="topping"
+              />
+              <label for="pickle">Pickle</label>
+              <p>Is there something else?</p>
+              <textarea
+                name="extra"
+                id="extra"
+                cols="30"
+                rows="5"
+                placeholder="Enter wishes, suggestions, critics,..."
+              ></textarea>
+              <br />
+              <input type="submit" value="Submit" id="burger-submit" />
             </form>
           </div>
-          <div class="grid-item"></div>
+          <div class="grid-item">
+            <h4>What to do</h4>
+            <br />
+            <p>
+              I created a form, that simulates that you can order a burger. You
+              can see how many options you have. I hope you are not hungry,
+              because you cannot order a burger here! That is why I did not add
+              any pictures of burgers, that would be just cruel. And that is not
+              me. I am no monster.
+              <br />
+              <br />
+              I just want to show you, that I can code this cool form 🤗
+            </p>
+          </div>
         </div>
       </section>
     </main>
